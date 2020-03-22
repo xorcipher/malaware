@@ -1,0 +1,13 @@
+# Tests that the getNodes method works properly for a graph with multiple nodes.
+
+# Return all the nodes of a graph in String format.
+
+CreateGraph graph
+
+AddNode graph A
+AddNode graph B
+AddNode graph C
+
+AddEdge graph A B edgeA
+
+ListNodes graph

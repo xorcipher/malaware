@@ -1,0 +1,45 @@
+CSE 331 Homework.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Alex Hugli
+
+Part 1: (Choosing a representation)
+
+    1.
+    - The advantage of a pure collection of edges is that it requires no nodes or Node objects, allows for easy
+       iteration over edges, and easy confirmation of whether an edge exists in the graph (by label). However,
+       this is a bit harder to make, and it doesn't allow for finding nodes easily.
+
+    - The advantage of an adjacency list is that it is pretty easy to produce, is very intuitive, and allows for
+       easy determination of whether a node exists in the graph. However, it makes finding edges between two
+       nodes much harder.
+
+    - This is probably the best option, because it is the most efficient since it is just a 2D array, or matrix, of
+       counts that represent whether an edge between two nodes exist.
+
+       This allows for really quick verification of whether there is an edge, and relatively quick verification of
+       whether there is a node (O(n)). However, it is wasteful in terms of space, if the graph is not populated to
+       fit the dimensions of the matrix well (ie, if the matrix is not full or close to full).
+
+    2.
+    - I chose to go with an adjacency list (or the closest thing to it). I found this to be very intuitive. It allows
+       for easy size operations, and O(n) complexity operations for finding nodes. It is also more efficient with space,
+       and allows for sorted output easier by virtue of the data structures used to store nodes.
+
+Part 4: (Additional tests and changes to specifications)
+
+    1. I did end up writing many more tests for my Graph ADT, and the reason is because I largely neglected null objects
+        and pointers while writing the tests the first time around. I also had to test for larger data sets, and I did
+        end up making some new rules that required new tests too. In general, though, my tests were still pretty good
+        and could be repurposed with their basic logic.
+
+    2. I changed a lot of my specs and methods, even. I added new methods and changed the specification to be as strong
+        as possible, so my implementation would handle as much as it could. I did this mainly because, when writing my
+        ADT, I didn't consider every possibility of implementation. I also added a new public class entirely (Node), which
+        I originally wanted to be private.
+
+
+
+
+
+

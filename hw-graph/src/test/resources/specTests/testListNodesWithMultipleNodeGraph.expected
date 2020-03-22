@@ -1,0 +1,13 @@
+# Tests that the getNodes method works properly for a graph with multiple nodes.
+
+# Return all the nodes of a graph in String format.
+
+created graph graph
+
+added node A to graph
+added node B to graph
+added node C to graph
+
+added edge edgeA from A to B in graph
+
+graph graph contains: A B C

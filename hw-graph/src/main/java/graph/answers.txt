@@ -1,0 +1,126 @@
+CSE 331 Homework.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Alex Hugli
+
+Part 1. (Written exercises)
+
+(a)
+
+IntQueue1 Representation Invariant:
+    // Representation Invariant for every IntQueue1 q1:
+    // entries != null && length(q1) > 0 &&
+    // forall entries i such that (0 <= i < length(q1)), q1[i] != null
+    // * The entries field always points to some usable object.
+    // * Entries does not contain any null elements.
+    // * The length of entries is always greater than 0.
+
+IntQueue1 Abstraction Function:
+    // Abstraction Function:
+    // IntQueue1, q1, represents a mutable collection of items, where new items
+    // get added to the end of the collection, and old items are removed from
+    // the front the collection.
+    // front{n1, n2, n3, n4}back
+    // Two IntQueue1's are equal if they contain the same exact sequence of items.
+
+----------------------------------
+
+IntQueue2 Representation Invariant:
+    // Representation Invariant for every IntQueue2 q2:
+    // entries != null && front >= 0 && back >= 0
+    // * The entries field always points to some usable object.
+    // * The front field is non-negative.
+    // * The back field is non-negative.
+
+IntQueue2 Abstraction Function:
+    // Abstraction Function:
+    // IntQueue2, q2, represents a mutable collection of items, where new items
+    // get added to the end of the collection, and old items are removed from
+    // the front the collection.
+    // front{n1, n2, n3, n4}back
+    // Two IntQueue2's are equal if they contain the same exact sequence of items.
+
+(b)
+
+    a / d / g:
+    front[1, 2], size = 2
+    all of these IntQueue2 objects are identical at the abstract level because they contain the same data and
+    have the same size from the client's perspective.
+
+    b / h:
+    front[2, 3, 4], size = 3
+    all of these IntQueue2 objects are identical at the abstract level because they contain the same data and
+    have the same size from the client's perspective.
+
+    c / f:
+    front[1, 2, 3], size = 3
+    all of these IntQueue2 objects are identical at the abstract level because they contain the same data and
+    have the same size from the client's perspective.
+
+    e:
+    front[1, 2, 3, 4], size = 4
+    this is the only IntQueue2 object with a size that no other IntQueue2 object has, making it unique. It also
+    contains 4 int entries, {1, 2, 3, 4}, which no other data IntQueue2 object here can show since they don't
+    have size = 4.
+
+(c)
+
+public int solveEquations(int x, int y, int z)
+    Explanation: Can't cause rep exposure because the variables passed in are all primitives, and the
+                 type returned is also primitive. So the underlying rep can't be altered with this
+                 method.
+public String[] decode(boolean slowly)
+    Explanation: Can't cause rep exposure, because the method is passing in a primitive that doesn't
+                 alter the rep in any way. My assumptions are that this method simply returns an array
+                 that is the decoded version of some instance variable of type String, and the boolean
+                 changes the speed of the decoding. I also assume that, since String[] are mutable,
+                 so as long as a new String[] is returned, it should be ok.
+private Date myBirthday()
+    Explanation: Can't cause rep exposure, because the method is simply returning an object of
+                 type Date. Therefore, the rep can't be altered in any way with this method.
+
+                 However, if the Date method does not return a new (copy) Date, then any other
+                 methods that may have altered the rep (if it is mutable) could leak through this
+                 method.
+public String toString()
+    Explanation: Can't cause rep exposure, because the method is simply returning the String
+                 representation of an object, and therefore the rep can't be altered with this method,
+                 since String is immutable.
+public Iterator<Integer> elements()
+    Explanation: This method alone cannot cause rep exposure, since it does not directly change the rep
+                 of the underlying object from what we know.
+
+                 However, it is possible that this method causes rep exposure, if the Iterator can be altered
+                 by another method, or is not a new copy of an Iterator, and so it leaks through this method.
+public Deck(List<Card> cards)
+    Explanation: This method may be able to cause rep exposure, and it is likely if the list passed through
+                 is not copied to make a new version before creating the new object.
+
+                 The reason for this is that if the client class (outside of the Deck class) maintains a
+                 reference to "cards", then they can change it after the object is created, bypassing
+                 any representation checks.
+
+Part 2.  (Graph interface/operations)
+
+Graph.java: The main class for representing a set of vertices connected by directed edges. This class
+will have methods to add a new vertex, add a new edge between vertexes, test equality, retrieve a hash code,
+a toString method, a checkRep method to check the object representation, a contains method to check if a
+vertex is in the graph, and a size method to retrieve the number of vertexes.
+
+Part 3.  (Testing strategy)
+
+For spec testing, I will include the most basic tests first to check that the functionality of my Graph ADT
+matches the specification. This means performing basic operations such as "new Graph()", "add", "contains"
+and more. This will allow me to check the most fundamental necessities of the class. These methods are the only
+methods guaranteed by the specification of the Graph ADT.
+
+After that, my testing strategy will include more complex operations, such as those that I choose to add
+to my implementation that are more unique. These ones will attempt to cover all the cases that my operations
+allow for, so that way I can cover all my bases.
+
+Overall, I should have around 20-30 tests. 12 for my spec tests, if I've counted the cases right, and
+
+
+
+
+

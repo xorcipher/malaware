@@ -1,0 +1,12 @@
+# Find a path with Dijkstra's algorithm when
+# the nodes entered are the same node, and
+# an edge already exists between the node and
+# itself.
+
+CreateGraph simpleGraph
+
+AddNode simpleGraph A
+
+AddEdge simpleGraph A A 5.0
+
+FindPath simpleGraph A A

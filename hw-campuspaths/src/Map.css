@@ -1,0 +1,82 @@
+/*
+ * Copyright (C) 2020 Hal Perkins.  All rights reserved.  Permission is
+ * hereby granted to students registered for University of Washington
+ * CSE 331 for use solely during Winter Quarter 2020 for purposes of
+ * the course.  No other use, copying, distribution, or modification
+ * is permitted without prior written consent. Copyrights for
+ * third-party components of this work must be honored.  Instructors
+ * interested in reusing these course materials should contact the
+ * author.
+ */
+
+/*
+NOTE: This file is designed to help you just get a simple canvas with the correct
+settings, centered on the screen. If you'd like to modify this, you're totally
+welcome to do so. This is just to help you get something simple working first.
+ */
+
+/*
+This makes all <canvas> elements fill 90% of the width of whatever they're inside.
+We deliberately do not set the height here too - when we set canvas.width
+and canvas.height in Map.js, this 90% helps keep the canvas from being too big,
+but not setting the height means the image keeps the correct aspect ratio (it'll be set
+automatically to the correct thing).
+ */
+canvas {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+/*
+ * Copyright ©2019 Dan Grossman.  All rights reserved.  Permission is
+ * hereby granted to students registered for University of Washington
+ * CSE 331 for use solely during Autumn Quarter 2019 for purposes of
+ * the course.  No other use, copying, distribution, or modification
+ * is permitted without prior written consent. Copyrights for
+ * third-party components of this work must be honored.  Instructors
+ * interested in reusing these course materials should contact the
+ * author.
+ */
+
+/*
+CSS file used by the Application
+
+It provides placement and style information for the components in the app
+and only exists for aesthetic purposes. The app would work just fine if this
+file was empty.
+*/
+
+/* Create some space around text boxes so the label text isn't scrunched up next to it. */
+input {
+    margin: 5px;
+}
+
+/* Same as above, but with ID "edge-list", and also creates a little margin so things aren't squished together. */
+#building-selection {
+    text-align: center;
+    margin: 5px;
+}
+
+/* This syntax means "any <button> elements inside something with ID "edge-list"" - the 2px is for above and
+ below the button, the 5px is the left and right sides. This prevents the draw and clear buttons from being
+ squished right next to each other. */
+#drop-down-select button {
+    margin: 2px 5px;
+}
+
+/* Centers the "Campus Path Finder!" text, which is in a <p> (paragraph) tag inside the <App /> component, and has an
+ID of "app-title". Also makes the text bigger, bold, and adds some space around the title. */
+#app-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#building-list-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}

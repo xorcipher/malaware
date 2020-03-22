@@ -1,0 +1,14 @@
+CSE 331 Homework.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Alex Hugli
+
+Describe any changes you made to your marvel or graph code, other
+than making changes to support generics:
+
+I made a couple changes: my testing code had to be altered to be more more robust,
+and my MarvelPaths was altered a little for testing consistency. Other than that,
+I only changed documentation, and removed the equals method for my Graph since it was
+useless. But that didn't affect anything.
+
+I also updated all my spec tests because I was doing them wrong.

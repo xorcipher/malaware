@@ -1,0 +1,7 @@
+# Tests that a node can be added to a graph when the node does not already exist in the graph.
+
+# Adds a new node to a graph.
+
+CreateGraph graph
+
+AddNode graph A

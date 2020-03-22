@@ -1,0 +1,9 @@
+# Tests that an edge can be added to two nodes within a graph when one or more of the specified nodes do not exist in the graph.
+
+# Creates a new edge between two nodes.
+
+CreateGraph graph
+
+AddNode graph A
+
+AddEdge graph A B edgeA

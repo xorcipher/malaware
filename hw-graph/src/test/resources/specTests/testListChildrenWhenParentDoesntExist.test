@@ -1,0 +1,12 @@
+# Tests that the getChildren method works properly for a graph in which the graph does not contain the specified node.
+
+# Return all the children of a given node within a given graph in a List.
+
+CreateGraph graph
+
+AddNode graph A
+AddNode graph B
+
+AddEdge graph A B edgeA
+
+ListChildren graph C

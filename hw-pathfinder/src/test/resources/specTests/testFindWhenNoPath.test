@@ -1,0 +1,13 @@
+# Find a path with Dijkstra's algorithm when
+# the nodes entered do not any possible valid
+# path between them.
+
+CreateGraph simpleGraph
+
+AddNode simpleGraph A
+AddNode simpleGraph B
+AddNode simpleGraph C
+
+AddEdge simpleGraph A B 5.0
+
+FindPath simpleGraph A C

@@ -1,0 +1,8 @@
+# Tests that a node can be added to a graph when the node is already in the graph.
+
+# Adds a new node to a graph.
+
+created graph graph
+
+added node A to graph
+node A already exists in graph

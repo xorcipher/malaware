@@ -1,0 +1,9 @@
+# Tests that the getChildren method works properly for a graph in which the graph does not contain the specified node.
+
+# Return all the children of a given node within a given graph in a List.
+
+created graph graph
+
+added node A to graph
+
+the children of A in graph are:

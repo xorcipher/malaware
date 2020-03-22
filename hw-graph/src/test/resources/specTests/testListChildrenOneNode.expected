@@ -1,0 +1,12 @@
+# Tests that the getChildren method works properly for a graph in which the graph contains the specified node.
+
+# Return all the children of a given node within a given graph in a List.
+
+created graph graph
+
+added node A to graph
+added node B to graph
+
+added edge edgeA from A to B in graph
+
+the children of A in graph are: B(edgeA)

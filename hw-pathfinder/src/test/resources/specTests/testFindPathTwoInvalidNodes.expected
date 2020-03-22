@@ -1,0 +1,12 @@
+# Find a path with Dijkstra's algorithm when
+# both of the nodes searched for are invalid.
+
+created graph simpleGraph
+
+added node A to simpleGraph
+added node B to simpleGraph
+
+added edge 5.000 from A to B in simpleGraph
+
+unknown node C
+unknown node D

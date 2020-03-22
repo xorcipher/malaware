@@ -1,0 +1,11 @@
+# Find a path with Dijkstra's algorithm when
+# one of the nodes searched for is invalid.
+
+CreateGraph simpleGraph
+
+AddNode simpleGraph A
+AddNode simpleGraph B
+
+AddEdge simpleGraph A B 5.0
+
+FindPath simpleGraph A C
